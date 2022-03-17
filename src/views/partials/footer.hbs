@@ -1,0 +1,33 @@
+
+      <footer class="footer">
+        <div class="container-fluid">
+          <nav class="float-left">
+            <ul>
+              <li>
+                <a href="/about">
+                  Politica de privacidad
+                </a>
+              </li>
+              <li>
+                <a href="/terms">
+                  Terminos y condiciones
+                </a>
+              </li>
+              <li>
+                <a href="/faq">
+                  FAQ
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright float-right" id="date">
+            , Hecho con <i class="material-icons">favorite</i> por
+            <a href="#" target="_blank">Los ThunderGers</a>.
+          </div>
+        </div>
+      </footer>
+      <script>
+        const x = new Date().getFullYear();
+        let date = document.getElementById('date');
+        date.innerHTML = '&copy; ' + x + date.innerHTML;
+      </script>

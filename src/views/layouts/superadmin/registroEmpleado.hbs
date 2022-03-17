@@ -1,0 +1,58 @@
+<section class="vh-100">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 text-black">
+
+                <div class="px-5 ms-xl-4">
+                    <i class="fas fa-crow fa-2x me-3 mt-xl-4" style="color: #709085;"></i>
+                    <span class="h1 fw-bold mb-0 text-light">MuniAquia</span>
+                </div>
+
+                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 pt-xl-0 mt-xl-n5">
+
+                    <form action="/registroemp" method="POST">
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="row mb-4">
+                            <div class="col">
+                                <div class="form-outline">
+                                    <input type="text" name="DNI" class="form-control" onkeypress="return isNumberKey(event)" requiredsize="8" minlength="4" maxlength="8"/>
+                                    <label class="form-label" >DNI</label>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" name="email"  class="form-control" />
+                            <label class="form-label" >Correo Electrónico</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" name="password"  class="form-control" />
+                            <label class="form-label" >Contraseña</label>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-center mb-4">
+                            <input class="form-check form-switch" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label">
+                                Acepto los terminos y condiciones
+                            </label>
+                        </div>
+
+                        <!-- Submit button -->
+                        <input class="btn btn-info btn-lg btn-block" type="submit" value="Registrar"></input>
+                    </form>
+
+                </div>
+
+            </div>
+            <div class="col-sm-6 px-0 d-none d-sm-block">
+                <img src="/images/background-aquia.jpg" alt="Login image" class="w-100 vh-100"
+                    style="object-fit: cover; object-position: left;">
+            </div>
+        </div>
+    </div>
+</section>

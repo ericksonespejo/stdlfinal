@@ -1,0 +1,38 @@
+<div class="sidebar" data-color="purple" data-background-color="black" data-image="/images/sidebar.jpg">
+    <div class="logo">
+        <a href="#" class="simple-text logo-normal">
+            STDL
+        </a>
+    </div>
+    <div class="sidebar-wrapper">
+      <!--  form action="" method="" ref="" id="" encType="multipart/form-data">-->
+        <ul class="nav">
+            <li class="nav-item ">
+              <form action="/user" method="get" style="align-items:center;display:flex;">
+                <i class="material-icons" style="margin-left:6.5%;">library_books</i>
+                <input type="submit" class="nav-link" value="Mis trámites" id="nav-user" style="background:none;border:none;width:60%;"/>
+              </form>
+            </li>
+            <li class="nav-item ">
+              <form action="/gentramite" method="get" style="align-items:center;display:flex;">
+                <i class="material-icons" style="margin-left:6.5%;">content_paste</i>
+                <input type="submit" value="Generar Trámite" class="nav-link" id="nav-gentramite" style="background:none;border:none;width:60%;">
+              </form>
+            </li>
+            <li class="nav-item ">
+              <form action="/userperfil" method="get" style="align-items:center;display:flex;">
+                <i class="material-icons" style="margin-left:6.5%;">person</i>
+                <input type="submit" value="Mi Perfil" class="nav-link" id="nav-userperfil" style="background:none;border:none;width:60%;">
+              </form>
+            </li>
+            <li class="nav-item ">
+              <!-- Método get o post? -->
+              <form action="/" method="get" style="align-items:center;display:flex;">
+                <i class="material-icons" style="margin-left:6.5%;">logout</i>
+                <input type="submit" value="Salir" class="nav-link" id="nav-home" style="background:none;border:none;width:60%;">
+              </form>
+            </li>
+        </ul>
+      <!--  /form>-->
+    </div>
+</div>

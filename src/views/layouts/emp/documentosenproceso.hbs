@@ -1,0 +1,268 @@
+{{>sidebaruser}}
+<div class="main-panel">
+    <!-- Navbar -->
+    {{>navusermun}}
+    <!-- End Navbar -->
+    <div class="content text-light">
+        <div class="contain">
+            <div class="row">
+                <div class="col">
+                    <h2>Documentos en proceso</h2>
+                </div>
+            </div>
+            {{>menuAcciones}}
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <table class="table table-sm table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col"><input type="checkbox"></th>
+                                <th scope="col">Reg</th>
+                                <th scope="col">Origen</th>
+                                <th scope="col">Firma</th>
+                                <th scope="col">Cargo</th>
+                                <th scope="col">Documento</th>
+                                <th scope="col">Fecha Doc.</th>
+                                <th scope="col">Asunto</th>
+                                <th scope="col">Derivado a</th>
+                                <th scope="col">Ver</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>007</td>
+                                <td>Oficina de imagen</td>
+                                <td>Angel weberas</td>
+                                <td>Jefe</td>
+                                <td>Solicitud 00015 MDA-PB</td>
+                                <td>12/06/2021</td>
+                                <td>Solicito Autorización de salida</td>
+                                <td>Dirección de gestión</td>
+                                <td><a href="/pdf/manual-sisgedo3.pdf" target="blank"><i
+                                            class="fa-solid fa-file-pdf text-dark title"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td> <input type="checkbox"> </td>
+                                <td>007</td>
+                                <td>Oficina de imagen</td>
+                                <td>Angel weberas</td>
+                                <td>Jefe</td>
+                                <td>Solicitud 00015 MDA-PB</td>
+                                <td>12/06/2021</td>
+                                <td>Solicito Autorización de salida</td>
+                                <td>Dirección de gestión</td>
+                                <td><a href="/pdf/manual-sisgedo3.pdf" target="blank"><i
+                                            class="fa-solid fa-file-pdf text-dark title"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>007</td>
+                                <td>Oficina de imagen</td>
+                                <td>Angel weberas</td>
+                                <td>Jefe</td>
+                                <td>Solicitud 00015 MDA-PB</td>
+                                <td>12/06/2021</td>
+                                <td>Solicito Autorización de salida</td>
+                                <td>Dirección de gestión</td>
+                                <td><a href="/pdf/manual-sisgedo3.pdf" target="blank"><i
+                                            class="fa-solid fa-file-pdf text-dark title"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>007</td>
+                                <td>Oficina de imagen</td>
+                                <td>Angel weberas</td>
+                                <td>Jefe</td>
+                                <td>Solicitud 00015 MDA-PB</td>
+                                <td>12/06/2021</td>
+                                <td>Solicito Autorización de salida</td>
+                                <td>Dirección de gestión</td>
+                                <td><a href="/pdf/manual-sisgedo3.pdf" target="blank"><i
+                                            class="fa-solid fa-file-pdf text-dark title"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>007</td>
+                                <td>Oficina de imagen</td>
+                                <td>Angel weberas</td>
+                                <td>Jefe</td>
+                                <td>Solicitud 00015 MDA-PB</td>
+                                <td>12/06/2021</td>
+                                <td>Solicito Autorización de salida</td>
+                                <td>Dirección de gestión</td>
+                                <td><a href="/pdf/manual-sisgedo3.pdf" target="blank"><i
+                                            class="fa-solid fa-file-pdf text-dark title"></i></a></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- derivar un documento -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">En Proceso [Derivar]</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="">Registros que sera derivados</label><br>
+                                        <input class="form-input" disabled type="text" value="0057"><br>
+                                        <input class="form-input" disabled type="text" value="0053"><br>
+                                        <input class="form-input" disabled type="text" value="0078">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="">Oficina:</label>
+                                        <input type="text" id="oficina-name" placeholder="Gerencia" disabled>
+
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="floatingSelect"
+                                                aria-label="Floating label select example">
+                                                <option selected>Selecciona un usuario</option>
+                                                <option value="1">Roberto</option>
+                                                <option value="2">Carlos</option>
+                                                <option value="3">Stefanny</option>
+                                            </select>
+                                            <label for="floatingSelect">Usuarios</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-floating">
+                                            <textarea class="form-control text-dark"
+                                                placeholder="Por ejemplo 'Para su conocimiento'"
+                                                id="floatingTextarea"></textarea>
+                                            <label for="floatingTextarea">Acciones</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message-text" class="">Adjuntar doc. Físicos:</label>
+                                        <input type="checkbox">
+
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Send message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- eliminar derivación -->
+            <div class="modal fade text-dark" id="eliminarDerivacion" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ¿Deseas eliminar los registros seleccionados?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Adjuntar documento a otro -->
+            <div class="modal fade text-dark" id="adjuntarDocumento" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">En proceso [archivar]</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="floatingSelect"
+                                            aria-label="Floating label select example">
+                                            <option selected>4-0</option>
+                                            <option value="1">38</option>
+                                            <option value="2">74</option>
+                                            <option value="3">03</option>
+                                        </select>
+                                        <label for="floatingSelect">Adjuntar al documento</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-floating">
+                                        <textarea class="form-control text-dark"
+                                            placeholder="Por ejemplo 'Para su conocimiento'"
+                                            id="floatingTextarea"></textarea>
+                                        <label for="floatingTextarea">Acciones</label>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Archivar documento -->
+            <div class="modal fade text-dark" id="archivarDocumento" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="">Registros que seran archivados</label>
+                                    <input type="text" placeholder="00078" disabled>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="floatingSelect"
+                                            aria-label="Floating label select example">
+                                            <option selected>01</option>
+                                            <option value="1">02</option>
+                                            <option value="2">03</option>
+                                            <option value="3">04</option>
+                                        </select>
+                                        <label for="floatingSelect">Archivador</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-floating">
+                                        <textarea class="form-control text-dark"
+                                            placeholder="Por ejemplo 'Se comunico por correo o whatsapp'"
+                                            id="floatingTextarea"></textarea>
+                                        <label for="floatingTextarea">Acciones</label>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{>footer}}
+    </div>

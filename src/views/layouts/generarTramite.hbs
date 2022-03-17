@@ -1,0 +1,121 @@
+{{>sidebar}}
+<div class="main-panel">
+    <!-- Navbar -->
+    {{>nav}}
+    <!-- End Navbar -->
+    <div class="content">
+        <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header card-header-primary">
+                                <h4 class="card-title ">REGISTRO DE NUEVO TRÁMITE</h4>
+                                <p class="card-category"> Todos los campos son necesarios salvo que se indique lo
+                                    contrario
+                                </p>
+                            </div>
+                            <div class="card-body">
+                              <form action="/gentramite" method="post" class="row g-3" ref="uploadForm" id="uploadForm" encType="multipart/form-data">
+                                <div class="card" style="display:none;">
+                                    <div class="card-header card-header-primary">
+                                        <h4 class="card-title text-light">INFORMACIÓN DEL REMITENTE</h4>
+                                    </div>
+                                    <div class="card-body">
+                                            <div class="col-md-6">
+                                                <label class="form-label">Remitente</label>
+                                                <input type="text" name="remittent" class="form-control"
+                                                    value="Andres Francisco Espejo Luna">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Domicilio fiscal</label>
+                                                <input type="text" class="form-control" name="address"
+                                                    value="La casa del administrado">
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label">DNI</label>
+                                                <input type="text" class="form-control" name="dni" value="45784512">
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label">Distrito</label>
+                                                <input type="text" class="form-control" name="district" placeholder="Tu distrito">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Teléfono</label>
+                                                <input type="text" class="form-control" name="phone" value="987584712">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="inputState" class="form-label">Correo</label>
+                                                <input type="email" class="form-control" name="email" value="correo@regitrado.com">
+                                            </div>
+                                    </div>
+                                </div>
+                                <!--información de contacto -->
+                                <div class="card">
+                                    <div class="card-header card-header-primary">
+                                        <h4 class="card-title text-light">INFORMACIÓN DEL DOCUMENTO</h4>
+                                    </div>
+                                    <div class="card-body">
+                                            <div class="col-md-6">
+                                                <label class="form-label">Tipo de documento</label>
+                                                <select class="form-control text-dark">
+                                                    <option>Seleccione el tipo de documento</option>
+                                                    <option>Carta</option>
+                                                    <option>Oficio</option>
+                                                    <option>Solicitud</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Procedimiento (Opcional)</label>
+                                                <select class="form-control text-dark">
+                                                    <option>Seleccione </option>
+                                                    <option>Con afecto al TUPA</option>
+                                                    <option>Sin afecto al TUPA</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label">N° de documento</label>
+                                                <input type="text" name="docNum" class="form-control" value="002" onkeypress="return isNumberKey(event)">
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label">Área de destino</label>
+                                                <input type="text" name="destArea" class="form-control"
+                                                    placeholder="Mesa de partes virtual" disabled>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">N° de Folios</label>
+                                                <input type="text" name="numFolio" class="form-control" value="5" required minlength="1" maxlength="8"onkeypress="return isNumberKey(event)"/>                                   
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="inputState" class="form-label">Asunto - Sumilla*</label>
+                                                <input type="text" name="asunto" class="form-control" value="Escriba el asunto">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="floatingTextarea2">Detalles de la solicitud</label>
+                                                <textarea class="form-control" name="details"
+                                                    placeholder="Escriba su solicitud de forma detallada"
+                                                    style="height: 100px"></textarea>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="col-mb-6">
+                                                        <label for="formFile" class="form-label">Adjuntar documento
+                                                            digital (Todos los documentos debén estar en un solo
+                                                            archivo)</label>
+                                                        <input class="form-control" name="documento" type="file" id="formFile"/>
+                                                        <p>Solo archivos PDF, .doc, .docx. Máximo 5 Mb</p>
+                                                    </div>
+                                                    <div class="col-md-4 d-flex justify-content-end">
+                                                        <input type="submit" value="Enviar trámite" class="btn btn-primary position-relative"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                              </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                     {{>footer}}
+                </div>
